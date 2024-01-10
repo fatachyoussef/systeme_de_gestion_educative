@@ -104,39 +104,6 @@ public class Main {
     }
     public static void main(String[] args) {
 
-        phase2Services.DepartementServices.registerJDBCDriver();
-
-        Enseignant enseignant = new Enseignant();
-        enseignant.setNom("Amine");
-        enseignant.setPrenom("Ben Charif");
-        enseignant.setEmail("test@gmail.com");
-        enseignant.setGrade("PES");
-        enseignant.setId(DB.getEnsId());
-        DB.enseignants.add(enseignant);
-
-
-        Enseignant enseignant2 = new Enseignant();
-        enseignant2.setNom("Ahmed");
-        enseignant2.setPrenom("Ben");
-        enseignant2.setEmail("ahmed@gmail.com");
-        enseignant2.setGrade("PES");
-        enseignant2.setId(DB.getEnsId());
-        DB.enseignants.add(enseignant2);
-
-
-        Departement departement = new Departement();
-        departement.setIntitule("Computer Science");
-        departement.setChef(enseignant);
-        departement.setId(DB.getDeptId());
-        DB.departements.add(departement);
-
-
-        Filiere filiere = new Filiere();
-        filiere.setIntitule("SITD");
-        filiere.setChef(enseignant2);
-        filiere.setDept(departement);
-        DB.filieres.add(filiere);
-
         showPrincipalMenu();
 
     }
